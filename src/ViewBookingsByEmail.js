@@ -60,10 +60,10 @@ function ViewBookingsByEmail() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">View Your Booking Requests</h1>
+    <div className="mx-auto p-5 bg-gray-50 min-h-screen">
+      <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">Track Booking Requests</h1>
 
-      <form onSubmit={handleSubmit} className="mb-8">
+      <form onSubmit={handleSubmit} className=" bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto mb-8">
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <input
             type="email"

@@ -186,7 +186,7 @@ function HotelAdmin() {
   );
 
   return (
-    <div className=" mx-auto p-5 bg-gray-100 min-h-screen">
+    <div className=" mx-auto p-5 bg-gray-50 min-h-screen">
       <h1 className="text-4xl font-bold mb-8 text-center text-black-800">Hotel Admin Dashboard</h1>
 
       {!hotel && (
@@ -217,6 +217,7 @@ function HotelAdmin() {
       {hotel && (
         <>
           <h1 className="text-3xl text-center font-bold mb-8 text-blue-800">{hotel.name}</h1>
+          <button className="btn text-3xl text-center font-bold mb-8 text-blue-800 text-center text-lg" onClick={copyToClipboard}>Copy Booking Link</button>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-blue-100 p-6 rounded-lg text-center shadow-lg">
@@ -233,12 +234,8 @@ function HotelAdmin() {
             </div>
           </div>
 
-          <div className="bg-white p-6 shadow-lg rounded-lg mb-8">
-            <h2 className="text-xl font-bold mb-4 text-blue-800">Share Booking Link</h2>
-            <button className="btn  text-lg" onClick={copyToClipboard}>Copy Booking Link</button>
-          </div>
 
-          <div className="bg-white p-6 shadow-lg rounded-lg mb-8">
+          {/* <div className="bg-white p-6 shadow-lg rounded-lg mb-8">
             <h2 className="text-2xl font-bold mb-4 text-blue-800">Requests per Country</h2>
             <div className="w-full" style={{ height: '400px' }}>
               <Bar 
@@ -261,7 +258,7 @@ function HotelAdmin() {
                 }}
               />
             </div>
-          </div>
+          </div> */}
 
           <div className="space-y-8">
             {['pending', 'confirmed', 'declined'].map((status) => (

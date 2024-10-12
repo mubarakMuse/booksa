@@ -226,7 +226,7 @@ function HotelBookingPage() {
   
 
   return (
-    <div className="container mx-auto p-4 md:p-8 bg-gray-100 min-h-screen">
+    <div className="container mx-auto p-4 md:p-8  min-h-screen">
       {hotelData ? (
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="lg:w-1/2">
@@ -236,7 +236,10 @@ function HotelBookingPage() {
                 <h1 className="text-3xl font-bold mb-2 text-gray-800">{hotelData.name}</h1>
                 <div className="flex items-center mb-2">
                   <span className="text-yellow-500 mr-1">★</span>
-                  <span className="text-gray-700">{hotelData.rating.toFixed(1)}</span>
+                  <span className="text-yellow-500 mr-1">★</span>
+                  <span className="text-yellow-500 mr-1">★</span>
+                  <span className="text-yellow-500 mr-1">★</span>
+                  <span className="text-yellow-500 mr-1">★</span>
                   <a href={hotelData.reviewsLink} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:underline">Read Reviews</a>
                 </div>
                 <p className="text-gray-600 mb-4">{hotelData.description}</p>
@@ -244,7 +247,7 @@ function HotelBookingPage() {
                   <p><strong>Location:</strong> {hotelData.location}</p>
                   <p><strong>Address:</strong> {hotelData.address}</p>
                   <p><strong>Phone:</strong> {hotelData.phone}</p>
-                  <p><strong>Email:</strong> {hotelData.email}</p>
+                  {/* <p><strong>Email:</strong> {hotelData.email}</p> */}
                 </div>
               </div>
             </div>
@@ -364,7 +367,7 @@ function HotelBookingPage() {
                 {form.isBusiness && (
                   <div className="form-control mt-4">
                     <label className="label">
-                      <span className="label-text">Travel Company Name:</span>
+                      <span className="label-text">Travel Company Name (if applicable):</span>
                     </label>
                     <input type="text" name="travelCompanyName" value={form.travelCompanyName} onChange={handleChange} className="input input-bordered w-full" />
                   </div>

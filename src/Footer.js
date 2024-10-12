@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from './logo.png';
 
 function Footer() {
   return (
@@ -7,7 +8,10 @@ function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">Booksa</h3>
+            <div className="flex items-center mb-4">
+              <img src={logo} alt="Booksa Logo" className="h-8 mr-3" />
+              <h3 className="text-xl font-semibold">Booksa</h3>
+            </div>
             <p>Directly book with hotels for your group trips.</p>
           </div>
           <div>
