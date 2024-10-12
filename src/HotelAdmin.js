@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import supabase from './supabaseClient';  // Supabase client setup
-import { Bar } from 'react-chartjs-2';  // For rendering the chart
+// import { Bar } from 'react-chartjs-2';  // For rendering the chart
 import 'chart.js/auto';  // Importing Chart.js
 import _ from 'lodash';  // Import Lodash
 
@@ -128,26 +128,26 @@ function HotelAdmin() {
     setResponseLoading(null);  // Reset loading state
   };
 
-  // Generate data for the requests per country graph
-  const getGraphData = () => {
-    const sortedCountries = _.sortBy(
-      Object.entries(stats.requestsPerCountry),
-      ([, count]) => -count
-    );
+  // // Generate data for the requests per country graph
+  // const getGraphData = () => {
+  //   const sortedCountries = _.sortBy(
+  //     Object.entries(stats.requestsPerCountry),
+  //     ([, count]) => -count
+  //   );
 
-    return {
-      labels: sortedCountries.map(([country]) => _.startCase(country)),
-      datasets: [
-        {
-          label: 'Requests per Country',
-          data: sortedCountries.map(([, count]) => count),
-          backgroundColor: 'rgba(54, 162, 235, 0.6)',
-          borderColor: 'rgba(54, 162, 235, 1)',
-          borderWidth: 1,
-        },
-      ],
-    };
-  };
+  //   return {
+  //     labels: sortedCountries.map(([country]) => _.startCase(country)),
+  //     datasets: [
+  //       {
+  //         label: 'Requests per Country',
+  //         data: sortedCountries.map(([, count]) => count),
+  //         backgroundColor: 'rgba(54, 162, 235, 0.6)',
+  //         borderColor: 'rgba(54, 162, 235, 1)',
+  //         borderWidth: 1,
+  //       },
+  //     ],
+  //   };
+  // };
 
   // Updated function to show toast notifications
   const showToast = (message, type = 'info') => {
