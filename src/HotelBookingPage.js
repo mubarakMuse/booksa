@@ -127,7 +127,7 @@ function HotelBookingPage() {
       to_name: bookingDetails.name,
       reply_to: 'mubarak@brightertunnel.com',
       from_name: 'Booksa Reservations',
-      subject: 'Booking Request Submitted',
+      subject: 'Booking Request Submitted - Booksa',
     };
 
     // Email to hotel admin
@@ -137,7 +137,7 @@ function HotelBookingPage() {
       to_name: `${hotelData.name} Admin`,
       reply_to: 'mubarak@brightertunnel.com',
       from_name: 'Booksa Reservations',
-      subject: 'New Booking Request',
+      subject: 'New Booking Request - Booksa',
     };
 
     // Send email to customer
