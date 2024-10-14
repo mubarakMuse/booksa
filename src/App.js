@@ -8,7 +8,6 @@ import HotelBookingPage from './HotelBookingPage';
 import HotelsPage from './HotelsPage';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import MultiHotelBooking from './MultiHotelBooking';
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/b" element={<MultiHotelBooking />} />
 
             <Route path="/hotels" element={<HotelsPage />} />
             <Route path="/view-bookings" element={<ViewBookingsByEmail />} />
