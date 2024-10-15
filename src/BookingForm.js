@@ -26,7 +26,8 @@ function BookingForm() {
     async function fetchHotels() {
       const { data: hotelList, error } = await supabase
         .from('hotels')
-        .select('id, name');
+        .select('id, name')
+        .eq('hide', false);
 
       if (error) {
         console.error('Error fetching hotels:', error.message);

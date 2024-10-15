@@ -12,7 +12,8 @@ function HomePage() {
     async function fetchHotels() {
       const { data, error } = await supabase
         .from('hotels')
-        .select('*');
+        .select('*')
+        .eq('hide', false);;
         
       if (error) {
         console.error('Error fetching hotels:', error.message);
